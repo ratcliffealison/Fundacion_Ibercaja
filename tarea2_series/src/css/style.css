@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+:root {
+    --primary-color: #E30203;
+    --secondary-color: #605C5C;
+    --third-color: #CFCFCF;
+    --forth-color: #3B1514;
+    --fifth-color: #1F1E1F;
+   
+  }
+
+body { 
+    font-family: "roboto";
+}
+.main {
+    background-image: url('../images/header_tv.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 7rem;
+    margin: 5px;
+}
+
+.button {
+    background-color: var(--third-color);
+    border-radius: 8px;
+    border-width: 0;
+    color: var(--fifth-color);
+    box-shadow: 2px 3px 2px #E30203;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+img { Width: 25%;
+    text-align: center;
+}
+
+nav {
+    background: var(--third-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #E30203;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+footer {
+    background-color: var(--forth-color);
+    color: var(--third-color);
+    justify-content: space-between;
+    display: flex;
+    font-weight: light;
+    bottom: 0; 
+    left: 0; 
+    z-index: -10;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1;
+    }
+
+ul li {
+    list-style-type: none;
+  }
+  
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+ }
+  
+a:hover {
+    color: var(--secondary-color);
+ } 

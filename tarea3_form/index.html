@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Solicitud de trabajo</h1>
+        </div>
+    </header>
+    <form>
+        <fieldset>
+            <legend>
+                Información personal
+            </legend>
+            <label for="nombre">Nombre:</label> <input type="text" maxlength="30" name="nombre" id="nombre" required/>
+            <label for="apellidos">Apellidos: </label><input type="text" maxlength="60" name= "apellidos" id="apellidos" required/><br>
+            <label for="correo_electronico">Correo electrónico: </label><input type="email" name="correo_electronico" id="correo_electronico" required><br>
+            <label for="direccion">Dirección: </label><input type="text" maxlength="60" name="direccion" id="direccion" required/><br>
+            <label for="codigo_postal">Código Postal: </label><input type="text" maxlength="5" pattern="[0-9]{5}" name="codigo_postal" id="codigo_postal"/><br>
+            <label for="localidad">Localidad:</label> <input type="text" name="localidad" id="localidad"required/> <br>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Datos Demográficos
+            </legend>
+            <label for="dob">Fecha de nacimiento: </label><input type="date" name="dob" id="dob"/><br>
+            <label for="">Genero:</label>
+            <label for="hombre">Hombre</label><input type="radio" name="genero" value="hombre"> 
+            <label for="mujer">Mujer</label><input type="radio" name="genero" value="mujer"> 
+            <label for="no_binario">No binario</label><input type="radio" name="genero" value="no_binario">
+        </fieldset>
+        <fieldset>
+            <legend>
+                Información académica
+            </legend> 
+            <div>
+                <label for="nivel_education">Nivel de Educación</label>
+                <select name="nivel_education">
+                    <option value="" disabled selected hidden>Selecciona...</option>
+                    <option value="">Educación primaria</option>
+                    <option value="">Educación secundaria obligatoria</option>
+                    <option value="">Bachillerato</option>
+                    <option value="">Formación profesional</option>
+                    <option value="">Estudios univesitarias</option>
+                    <option value="">Estudios avanzados</option>
+                </select><br>
+            </div>
+            <div>
+                <label for="idiomas">Idiomas: </label><br>
+                <input type="checkbox" value="en" name="idiomas[]" id="english"></input> <label for="english">Inglés </label>
+                <input type="checkbox" value="es" name="idiomas[]" id="español"></input> <label for="español">Español </label>
+                <input type="checkbox" value="cat" name="idiomas[]" id="catalan"></input> <label for="catalan">Catalán </label>
+                <input type="checkbox" value="bas" name="idiomas[]" id="vasco"></input> <label for="vasco">Euskera </label>
+                <input type="checkbox" value="gal" name="idiomas[]" id="gallego"></input> <label for="gallego">Gallego </label>
+                <input type="checkbox" value="fr" name="idiomas[]" id="frances"></input> <label for="frances">Francés </label>
+                <input type="checkbox" value="it" name="idiomas[]" id="italiano"></input> <label for="italiano">Italiano </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Experiencia Laboral
+            </legend>
+            <label for="degree_doc">Curriculum Vitae: </label> <input type="file" id="degree_doc" name="degree" accept=".doc,.docx,.pdf"/><br>
+            <label for="years_experience">Años de experiencia en tu campo: </label><input type="number" id="years_experience" name="years_experience"><br>
+            <label for="linked_in">Perfíl de Linked In: </label><input type="url" placeholder="https://linkedin.com/..."/>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Carta de Presentación
+            </legend>
+            <textarea name="carta_presentacion" required placeholder="Escriba aquí tu carta de presentación" cols="50" rows="2"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Protección de datos
+            </legend>
+            <input type="checkbox" name="lopd_permission" required> <label for="lopd_permission">He leído y acepto la <a href="https://www.google.com/" target="_blank"> politica de privacidad.</a> </label>
+        </fieldset>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

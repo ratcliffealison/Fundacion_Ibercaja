@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Merriweather:wght@300&display=swap');
+
+
+/* font-family: 'Karla', sans-serif;
+font-family: 'Karla', sans-serif;*/
+
+body { 
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h4 { 
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+h1 {
+    font-size: 46px;
+    padding: 0 25px;
+}
+
+h2 {
+    padding-left: 10px;
+}
+div.main  {
+    border:#71767d solid 2px;
+}
+
+table {
+    text-align: justify;
+    max-width: 60%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin: 25px 0;
+}
+
+.background-black {
+    background-color: black;
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
+}
+
+.white-text {
+    color: white;
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+}
+
+.flex-child {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 50%;
+}
+
+thead{
+    color: #ffffff;
+    background-color: #71767d;
+   /** font-family: 'Merriweather', serif; **/
+}
+
+tr {
+    padding: 12px 15px;
+}
+
+td, th{
+    padding: 20px}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-item a {
+    color:  #71767d;
+    border: 2px solid  #71767d;
+    border-radius: 5px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color:  #71767d;
+    color: white;
+}
+
+.nav-item a:active {
+    background-color:  #71767d;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
