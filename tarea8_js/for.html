@@ -53,9 +53,28 @@
 
 
         let notas = [5, 6, 5, 7, 8, 9, 6];
-        for (let posicion=0; posicion<notas.length; posicion++){
+        for (let posicion = 0; posicion < notas.length; posicion++) {
             console.log(notas[posicion])
         }
+
+        // 2 times multiplicator in 2 ways 
+        for (let i = 1; i <= 10; i++) {
+            console.log("2 x " + i + " = " + 2 * i)
+        }
+
+        for (let x = 2; x <= 2; x++) {
+            for (let j = 1; j <= 10; j++) {
+                console.log(x + " x " + j + " = " + x*j)
+            }
+        }
+
+        for (let x = 1; x <= 10; x++) {
+            console.log("Tabla del " + x)
+            for (let j = 1; j <= 10; j++) {
+                console.log(j + " x " + x + " = " + x*j)
+            }
+        }
+
 
 
     </script>
