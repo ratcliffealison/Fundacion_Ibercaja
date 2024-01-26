@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Calculadora de Notas
+    </h1>
+    
+        <label for="inputNota">Ingresa tu nota (0-10):</label>
+        <input id="inputNota" onchange="checkNota()" type="number" min="0" max="10">
+        <button id="submitButton" onclick="showNota(notaActual)">Submit</button>
+
+    <h2>Tu cualificación: <span id="result"></span></h2>
+
+
+
+    <script>
+        const notaOptions = ["Nota no entregada", "Suspenso", "Aprobado", "Notable", "Sobresaliente"]
+        var inputValue; 
+        var resultText = document.getElementById("result")
+        var notaActual = 0;
+
+        function checkNota() {
+            inputValue = document.getElementById("inputNota").value;
+            if (inputValue < 5) {
+                console.log("estoy aqui")
+                notaActual = 1;
+            } else if (inputValue < 7 && inputValue >= 5) {
+                notaActual = 2;
+            } else if (inputValue < 9 && inputValue >= 7) {
+                notaActual = 3;
+            }else if (inputValue <=10 && inputValue>= 9 ){
+                notaActual = 4;
+            }else { showNota[0]}
+            console.log(notaActual);
+            return notaActual
+        }
+
+        function showNota(notaActual) {
+            resultText.innerText = notaOptions[notaActual]
+            console.log(notaOptions[notaActual])
+        }
+        
+    </script>
+</body>
+
+</html>

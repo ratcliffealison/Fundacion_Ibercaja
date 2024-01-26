@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Juego de adivinanza</h1>
+    <h2>selecciona un nivel</h2>
+    <button id="easy" value="0" onclick="updateLevel">Facil</button> <button id="normal" value="1" onclick="updateLevel">Normal</button><button id="expert" value="3" onclick="updateLevel">experto</button>
+    <input id="numInput" type="number" min="1" max="100">
+    Jugamos
+    <button onclick="updateGuess()">verificar</button>
+    <button onclick="restartGame()">reiniciar</button>
+    <p id="playText"></p>
+    <p id="intentosText"></p>
+
+
+
+
+    <script>
+        // Initialize variables
+        let ranNumber;
+        let guessNumber;
+        let isCorrect = false;
+        let playText = document.getElementById("playText");
+        let intentos;
+        let intentosText = document.getElementById("intentosText")
+        let easyButton = document.getElementById("easy")
+        let normalButton = document.getElementById("normal")
+        let expertButton = document.getElementById("expert")
+
+
+        // Create functions
+        function createNumber() {
+            console.log("aqui numerCreate");
+            ranNumber = Math.floor(Math.random() * 100) + 1; //
+            console.log(ranNumber)
+            return ranNumber;
+        }
+
+        function updateIntentos() {
+            intentos--;
+            if (intentos > 0) { 
+                intentosText.innerText = "Tienes " + intentos + " intentos."
+
+            }else {
+                intentosText.innerText = "No te quedan intentos."
+            }
+        }
+
+        function updateGuess() {
+            console.log("estoy en update guess")
+            guessNumber = document.getElementById("numInput").value;
+            console.log(guessNumber)
+            if (intentos > 0) {
+                verifyNumbers(guessNumber)
+                console.log("hay " + intentos + " intentos")
+            } else 
+        }
+
+        function displaySuccess() {
+            console.log("estoy displaySucess")
+            playText.innerText = "Has adivinado el numero! Tu numero: " + guessNumber + " es igual " + ranNumber;
+        }
+
+        function verifyNumbers(guessNumber) {
+            updateIntentos()
+            if (guessNumber == ranNumber) {
+                isCorrect = true;
+                displaySuccess()
+            } else if (guessNumber > ranNumber) {
+                playText.innerText = "El numero es menor que " + guessNumber + ". Intentalo de nuevo."
+            
+            } else if (guessNumber < ranNumber) {
+                playText.innerText = "El numero es mayor que " + guessNumber + ". Intentalo de nuevo."
+            }
+        }
+        function selectLevel () {
+            
+        }
+        function restartGame() {
+            createNumber()
+            playText.innerText = "Adivina en que numero estoy pensando. ";
+            playText.innerHTML += "Te quedan " + intentos + " intentos."
+        }
+
+
+        function initializeGame() {
+            selectLevel()
+            restartGame(nivel)
+            
+        }
+
+        initializeGame()
+
+
+
+
+
+
+        // do { verifyNumbers }
+        // while (isCorrect != true) {
+        //     if (ranNumber > guessNumber) {
+        //         playText.innerText = "El numero que buscas es mayor que" + guessNumber;
+        //         playText.innerText += "Intenta de nuevo";
+        //     } else {
+        //         playText.innerText = "El numero que buscas es menor que" + guessNumber;
+        //         playText.innerText += "Intenta de nuevo";
+        //     }
+        // }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

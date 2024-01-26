@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // var correct = false;
+
+
+        // do { respuesta = prompt("Qué día cae") }
+        // while (correct != true)
+        // let respuesta = prompt("¿Cuantas patas tiene una araña?");
+
+        // if (respuesta == "8") {
+        //     console.log("Congrats!");
+        // } else {
+        //     console.log("Ohhh, no.");
+        // }
+        // console.log("Gracias por jugar")
+
+
+        var correct = false;
+        let respuesta = prompt("¿Cuantas patas tiene una araña?");
+        let solucion = "8";
+        let contador_de_intentos = 0;
+
+        for (let i = 0; i < 3; i++) {
+
+            do {
+                respuesta = prompt("Intenta otra vez");
+                console.log("Tu respuesta no es correcta")
+
+            } while (respuesta != solucion);
+            correct = true;
+
+            if (correct == true) {
+                console.log("Enhorabuena!")
+            }
+
+        }console.log("ya no tienes intentos")
+
+
+        // if (respuesta == "8") {
+        //     console.log("Congrats!");
+        //     correct = true;
+        // } else {
+        //     console.log("Ohhh, no.");
+        // }
+        // console.log("Gracias por jugar")
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
